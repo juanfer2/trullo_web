@@ -20,9 +20,9 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "CI=false react-scripts start",
-    "build": "CI=false react-scripts build",
-    "test": "CI=fals ereact-scripts test",
+    "start": "CI=false craco start",
+    "build": "CI=false craco build",
+    "test": "CI=false craco test",
     "eject": "react-scripts eject",
     "lint": "eslint \"**/*.{js, jsx, ts,tsx}\"",
     "lint:fix": "eslint --fix",
