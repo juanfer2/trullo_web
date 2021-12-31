@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
 import Card from '@components/card';
-import { StoreState } from '@store/config_store'
-import { useSelector, useDispatch } from 'react-redux'
-import { updateStatus } from '@store/reducers/healt_reducer'
+import { StoreState } from '@store/config_store';
+import { useSelector, useDispatch } from 'react-redux';
+import { updateStatus } from '@store/reducers/healt_reducer';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const healtStatus = useSelector((state: StoreState) => state.healt.status)
-  const dispatch = useDispatch()
+  const healtStatus = useSelector((state: StoreState) => state.healt.status);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(updateStatus())
-  }, [])
+    dispatch(updateStatus());
+  }, []);
 
   return (
     <div className="App">
@@ -21,7 +21,7 @@ function App() {
         <p>
           StatusStore <code>{healtStatus}</code>
         </p>
-        <Card/>
+        <Card />
         <a
           className="App-link"
           href="https://reactjs.org"
