@@ -33,11 +33,11 @@
         "import/prefer-default-export": "off",
         "react/prop-types": "off",
         "max-len": ["warn", { "code": 100 }],
+        "prettier/prettier": ["off", {"endOfLine": "auto"}],
         "import/extensions": ["error", "ignorePackages", {
             "ts": "never",
             "tsx": "never"
-        }],
-        "prettier/prettier": ["off", {"endOfLine": "auto"}]
+        }]
     },
     "settings": {
         "import/resolver": {

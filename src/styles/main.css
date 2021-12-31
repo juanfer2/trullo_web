@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;1,400;1,700&display=swap");
+.card {
+  color: black;
+}
+
+.baged {
+  background-color: #EBDCF9;
+  border-radius: 8px;
+}
+.baged-text {
+  color: #9B51E0;
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: -0.035em;
+}
+
+body {
+  background: #F8F9FD;
+}
+/*# sourceMappingURL=main.css.map */
