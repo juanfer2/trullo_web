@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import store from '@store/config_store';
 import { Provider } from 'react-redux';
+import 'antd/dist/antd.css';
 import './index.css';
+import './styles/main.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
