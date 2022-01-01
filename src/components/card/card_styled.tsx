@@ -4,7 +4,7 @@ export const CardStyle: any = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   width: 243px;
@@ -26,5 +26,5 @@ export const CardStyle: any = styled.div`
   .info {
     display: flex;
     justify-content: space-between;
-  } 
+  }
 `;

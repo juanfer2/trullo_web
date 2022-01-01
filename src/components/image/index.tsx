@@ -1,21 +1,22 @@
-import React from 'react'
-import { ImageStyle, ImageSizes } from '@components/image/image_styled'
+import React from 'react';
+import { ImageStyle, ImageSizes } from '@components/image/image_styled';
 
-interface ImageInterface {
+export interface ImageInterface {
   imageUrl: string;
   type: string;
+  name: string;
 }
 
-function Image({imageUrl, type='default'}: ImageInterface) {
-  
+function Image({ imageUrl, type = 'default', name }: ImageInterface) {
   return (
-    <ImageStyle 
+    <ImageStyle
       width={ImageSizes[type].width || 'auto'}
       height={ImageSizes[type].height || 'auto'}
-      border={ImageSizes[type].border || '0px'}>
-      <img src={imageUrl} alt="container" />
+      border={ImageSizes[type].border || '0px'}
+    >
+      <img src={imageUrl} alt={name} />
     </ImageStyle>
-  )
+  );
 }
 
-export default Image
+export default Image;

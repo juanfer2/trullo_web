@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const BagedStyle: any = styled.div`
+export const BadgeStyle: any = styled.div`
   background-color: ${(props: any) => props.background};
   border-radius: 8px;
 
@@ -13,8 +13,8 @@ export const BagedStyle: any = styled.div`
   }
 `;
 
-export const typeColor: any = {      
-  'primary': {background: '#D5E6FB', color: '#2F80ED'},
-  'secondary': {background: '#D3EADD', color: '#219653'},
-  'warning': {background: '#EBDCF9', color: '#9B51E0'}
-}
+export const typeColor = {
+  primary: { background: '#D5E6FB', color: '#2F80ED' },
+  secondary: { background: '#D3EADD', color: '#219653' },
+  warning: { background: '#EBDCF9', color: '#9B51E0' }
+};
