@@ -155,6 +155,55 @@ input {
   display: none;
 }
 
+.section-trullo .container-logo {
+  margin-bottom: 10px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  gap: 1em;
+}
+.social-media .text {
+  color: #828282;
+}
+.social-media .icons-social {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.register .container-register {
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+  border-radius: 24px;
+  padding: 25px;
+  background-color: #FFFFFF;
+  max-width: 400px;
+  position: absolute;
+  top: 150px;
+}
+.register .container-register form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-bottom: 10px;
+}
+.register .container-register form input {
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  height: 40px;
+  width: 100%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
 body {
   background: #F8F9FD;
 }/*# sourceMappingURL=main.css.map */

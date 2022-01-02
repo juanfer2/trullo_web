@@ -1,3 +1,4 @@
+import Register from '@pages/auth/register';
 import Boards from '@pages/boards';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
@@ -14,9 +15,14 @@ function RoutesConfig() {
 
   const components = [
     {
-      name: 'path_login',
-      path: '/',
-      element: <div>Login</div>
+      name: 'register',
+      path: 'auth/register',
+      element: <Register />
+    },
+    {
+      name: 'login',
+      path: 'auth/login',
+      element: <Register />
     },
     {
       name: 'boards',
