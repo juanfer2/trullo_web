@@ -10,52 +10,54 @@ function BoardForm() {
     handleSubmit,
     errors,
     register,
-    imageUrl,
     inputRef,
     onFileChange,
     changeIsPrivate,
     isPrivate,
-    clearImage
+    clearImage,
+    imageState: { imageUrl, loadingImage }
   }: {
     onSubmit: any;
     handleSubmit: any;
     errors: any;
     register: any;
     getValues: any;
-    imageUrl: any;
     setImageUrl: any;
     inputRef: any;
     onFileChange: any;
     changeIsPrivate: any;
     isPrivate: any;
-    clearImage: Function
+    clearImage: Function;
+    imageState: any;
   } = useBoardForm();
 
   return (
     <div className="board-form">
       <form onSubmit={handleSubmit(onSubmit)}>
+        {loadingImage && <p>...Loading</p>}
         {imageUrl && (
           <div className="container-img">
             <div className="container-image">
               <img className="image" src={imageUrl} alt="form" />
             </div>
             <div className="delete-photo">
-                <Button type="primary" onClick={() => clearImage()}>
-                  <CloseOutlined />
-                </Button>
-              </div>
+              <Button type="primary" onClick={() => clearImage()}>
+                <CloseOutlined />
+              </Button>
+            </div>
           </div>
         )}
 
         <div className="container-input">
           <input className="input-name" {...register('title')} placeholder="Add board title" />
-          {errors.title && <p>This is required</p>}
+          {errors.title && <span className="error-message">This is required</span>}
         </div>
 
         <div className="container-status">
-          <Button 
-            onClick={() => inputRef.current.click()} 
-            className={imageUrl ? "status-cover status-cover--active" : "status-cover status-cover"}>
+          <Button
+            onClick={() => inputRef.current.click()}
+            className={imageUrl ? 'status-cover status-cover--active' : 'status-cover status-cover'}
+          >
             <FileImageFilled />
             <span>cover</span>
 

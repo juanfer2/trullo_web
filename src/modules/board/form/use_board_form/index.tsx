@@ -13,8 +13,18 @@ const defaultValues = {
   isPrivate: false
 };
 
+interface ImgInterface {
+  imageUrl: string;
+  loadingImage: boolean;
+  errorImage: any;
+}
+
 export const useBoardForm = () => {
-  // const [fileImg, setFileImg] = useState('')
+  const [imageState, setImageState] = useState<ImgInterface>({
+    imageUrl: '',
+    loadingImage: false,
+    errorImage: ''
+  });
   const [imageUrl, setImageUrl] = useState('');
   const inputRef = createRef<any>();
 
@@ -45,11 +55,12 @@ export const useBoardForm = () => {
 
     setValue('image', file);
 
-    if (file) {
+    if (event.target.files && event.target.files[0]) {
+      setImageState({ ...imageState, loadingImage: true });
       const reader = new FileReader();
-      reader.onload = () => {
-        const fileUrl: any = reader.result;
-        setImageUrl(fileUrl);
+      reader.onloadend = () => {
+        const fileUrl: string = reader.result as string;
+        setImageState({ ...imageState, imageUrl: fileUrl, loadingImage: false });
       };
       reader.readAsDataURL(event.target.files[0]);
     }
@@ -60,9 +71,10 @@ export const useBoardForm = () => {
   };
 
   const clearImage = () => {
+    setImageState({ ...imageState, imageUrl: '', errorImage: '' });
+    inputRef.current.value = '';
     setValue('image', {});
-    setImageUrl('');
-  }
+  };
 
   const isPrivate = useWatch({ control, name: 'isPrivate' });
 
@@ -79,6 +91,7 @@ export const useBoardForm = () => {
     onFileChange,
     changeIsPrivate,
     isPrivate,
-    clearImage
+    clearImage,
+    imageState
   };
 };
