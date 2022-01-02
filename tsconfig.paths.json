@@ -6,7 +6,10 @@
          "@clients/*" : ["./clients/*"],
          "@utils/*" : ["./utils/*"],
          "@store/*" : ["./store/*"],
-         "@pages/*" : ["./pages/*"]
+         "@pages/*" : ["./pages/*"],
+         "@assets/*" : ["./assets/*"],
+         "@routes/*" : ["./routes/*"],
+         "@modules/*" : ["./modules/*"]
        }
   }
 }

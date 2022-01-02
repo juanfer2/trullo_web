@@ -34,6 +34,7 @@
         "react/prop-types": "off",
         "max-len": ["warn", { "code": 100 }],
         "prettier/prettier": ["off", {"endOfLine": "auto"}],
+        "react/jsx-props-no-spreading": ["off"],
         "import/extensions": ["error", "ignorePackages", {
             "ts": "never",
             "tsx": "never"

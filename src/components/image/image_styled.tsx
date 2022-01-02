@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const ImageSizes: any = {
   default: {
-    width: '219px',
-    height: '130px',
+    width: '100%',
+    height: '20vh',
     border: '12px'
   },
   small: {
@@ -18,5 +18,7 @@ export const ImageStyle: any = styled.div`
     border-radius: ${(props: any) => props.border};
     width: ${(props: any) => props.width};
     height: ${(props: any) => props.height};
+    background-size: cover;
+    background-position: center;
   }
 `;

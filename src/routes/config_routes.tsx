@@ -1,3 +1,4 @@
+import Boards from '@pages/boards';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import PrivateRoute from './private_routes';
@@ -16,6 +17,11 @@ function RoutesConfig() {
       name: 'path_login',
       path: '/',
       element: <div>Login</div>
+    },
+    {
+      name: 'boards',
+      path: '/boards',
+      element: <Boards />
     }
   ];
 
