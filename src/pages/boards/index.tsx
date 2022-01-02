@@ -3,10 +3,12 @@ import Card from '@components/card';
 import 'material-design-icons';
 import Modal from '@components/modal';
 import BoardForm from '@modules/board/form';
+import ImagePexels from '@assets/images/nature-image.jpg'
 
 function Boards() {
   const image = 'https://joeschmoe.io/api/v1/random';
 
+  /*
   const bagedList = [
     {
       label: 'label 1',
@@ -17,6 +19,7 @@ function Boards() {
       type: 'secondary'
     }
   ];
+  */
 
   const avatarURls = [{ name: image, url: image }];
   return (
@@ -31,29 +34,25 @@ function Boards() {
       <div className="list-board">
         <Card
           title="My first Card"
-          imageUrl={image}
-          listBadged={bagedList}
+          imageUrl={ImagePexels}
           avatarUrls={avatarURls}
         />
 
         <Card
           title="My first Card"
-          imageUrl={image}
-          listBadged={bagedList}
+          imageUrl={ImagePexels}
           avatarUrls={avatarURls}
         />
 
         <Card
           title="My first Card"
-          imageUrl={image}
-          listBadged={bagedList}
+          imageUrl={ImagePexels}
           avatarUrls={avatarURls}
         />
 
         <Card
           title="My first Card"
-          imageUrl={image}
-          listBadged={bagedList}
+          imageUrl={ImagePexels}
           avatarUrls={avatarURls}
         />
       </div>

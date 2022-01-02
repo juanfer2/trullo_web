@@ -1,5 +1,6 @@
 import Register from '@pages/auth/register';
 import Boards from '@pages/boards';
+import BoardDetail from '@pages/boards/detail';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import PrivateRoute from './private_routes';
@@ -28,6 +29,11 @@ function RoutesConfig() {
       name: 'boards',
       path: '/boards',
       element: <Boards />
+    },
+    {
+      name: 'boards',
+      path: '/boards/:id/',
+      element: <BoardDetail />
     }
   ];
 

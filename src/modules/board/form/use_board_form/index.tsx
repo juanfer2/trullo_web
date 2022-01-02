@@ -1,25 +1,26 @@
 import { useState, createRef } from 'react';
 import { useForm, useWatch } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+import { schema } from '@modules/board/form/use_board_form/validationSchema'
 
-const schema = yup.object({
-  title: yup.string().required('this field is required')
-});
+interface Board {
+  title: string,
+  image?: any,
+  isPrivate: boolean
+}
 
 const defaultValues = {
   title: '',
   image: {},
   isPrivate: false
 };
-
 interface ImgInterface {
   imageUrl: string;
   loadingImage: boolean;
   errorImage: any;
 }
 
-export const useBoardForm = () => {
+export const useBoardForm = (intialState?: Board) => {
   const [imageState, setImageState] = useState<ImgInterface>({
     imageUrl: '',
     loadingImage: false,
@@ -36,7 +37,7 @@ export const useBoardForm = () => {
     control,
     formState: { errors }
   } = useForm({
-    defaultValues,
+    defaultValues: intialState as Board || defaultValues,
     mode: 'onChange',
     resolver: yupResolver(schema)
   });

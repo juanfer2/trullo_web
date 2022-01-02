@@ -27,4 +27,19 @@ export const CardStyle: any = styled.div`
     display: flex;
     justify-content: space-between;
   }
+
+  .quantity {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+
+    .icon {
+      color: #BDBDBD;
+    }
+
+    span {
+      color: #BDBDBD;
+      margin-left: 3px;
+    }
+  }
 `;

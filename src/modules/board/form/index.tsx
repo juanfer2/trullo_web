@@ -2,6 +2,7 @@ import React from 'react';
 // import Image from '@assets/images/nature-image.jpg';
 import { Button } from 'antd';
 import { LockFilled, UnlockFilled, FileImageFilled, CloseOutlined } from '@ant-design/icons';
+import ImageCrob from '@components/image/image_crop';
 import { useBoardForm } from './use_board_form';
 
 function BoardForm() {
@@ -37,9 +38,7 @@ function BoardForm() {
         {loadingImage && <p>...Loading</p>}
         {imageUrl && (
           <div className="container-img">
-            <div className="container-image">
-              <img className="image" src={imageUrl} alt="form" />
-            </div>
+            <ImageCrob imageUrl={imageUrl} />
             <div className="delete-photo">
               <Button type="primary" onClick={() => clearImage()}>
                 <CloseOutlined />
@@ -56,7 +55,11 @@ function BoardForm() {
         <div className="container-status">
           <Button
             onClick={() => inputRef.current.click()}
-            className={imageUrl ? 'status-cover status-cover--active' : 'status-cover status-cover'}
+            className={
+              imageUrl 
+                ? 'status-cover status-cover--active'
+                : 'status-cover status-cover'
+            }
           >
             <FileImageFilled />
             <span>cover</span>
