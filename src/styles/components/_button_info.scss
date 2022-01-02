@@ -1,0 +1,25 @@
+.button-info{
+  background-color: #F2F2F2;
+  color: #828282;
+  text-align: center;
+  border-radius: 8px;
+  padding: 4px 25px;
+
+  &:hover {
+    background-color: #D3EADD;
+    color: #219653;
+    border-color: #D3EADD;
+  }
+
+  &:active {
+    background-color: #D3EADD;
+    color: #219653;
+    border-color: #D3EADD;
+  }
+
+  &:focus {
+    background-color: #D3EADD;
+    color: #219653;
+    border-color: #D3EADD;
+  }
+}

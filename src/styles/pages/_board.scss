@@ -1,0 +1,28 @@
+
+.section-info {
+  display: flex;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  padding: 15px;
+
+  .board-info {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+
+    .avatars {
+      display: flex;
+      gap: 1em;
+    }
+  }
+
+  .board-actions {
+    display: flex;
+    align-items: center;
+
+    .menu {
+      padding: 10px;
+      border-radius: 8px;
+    }
+  }
+}
