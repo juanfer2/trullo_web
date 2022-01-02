@@ -92,8 +92,8 @@
 }
 .board-form form .container-img .delete-photo {
   position: absolute;
-  margin-top: -113px;
-  margin-left: 440px;
+  top: -14px;
+  right: -14px;
 }
 .board-form form .container-img .delete-photo button {
   border-radius: 8px;
