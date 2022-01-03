@@ -1,7 +1,7 @@
 import React from 'react';
 import Logo from '@assets/images/Logo.svg';
 import { Input, Button } from 'antd';
-import Image from '@components/image';
+import AvatarMenu from '@modules/perfil/avatar_menu';
 
 function Navbar() {
   return (
@@ -22,9 +22,7 @@ function Navbar() {
           <Button type="primary">Search</Button>
         </div>
 
-        <div className="perfil-settings">
-          <Image imageUrl="https://joeschmoe.io/api/v1/random" type="small" name="avatar-header" />
-        </div>
+        <AvatarMenu imageUrl="https://joeschmoe.io/api/v1/random"/>
       </div>
     </nav>
   );
