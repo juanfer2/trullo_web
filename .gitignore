@@ -23,3 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 
 .env
+
+# Cypress
+cypress/videos/*
+cypress/screenshots/*
+cypress/integration/1-getting-started
+cypress/integration/2-advanced-examples

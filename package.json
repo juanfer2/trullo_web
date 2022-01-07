@@ -41,7 +41,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint \"**/*.{js, jsx, ts,tsx}\"",
     "lint:fix": "eslint --fix",
-    "prettier": "prettier --write './**/*.{js,jsx,ts,tsx}' --config ./.prettierrc"
+    "prettier": "prettier --write './**/*.{js,jsx,ts,tsx}' --config ./.prettierrc",
+    "cy:run": "./node_modules/.bin/cypress run",
+    "cy:open": "./node_modules/.bin/cypress open"
   },
   "browserslist": {
     "production": [
@@ -62,9 +64,11 @@
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
     "craco-alias": "^3.0.1",
+    "cypress": "^9.2.0",
     "eslint": "^8.5.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
