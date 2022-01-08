@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 
 import { FileTextFilled, EditFilled } from '@ant-design/icons';
-import SubTitle from '@pages/boards/detail/default/sub_title';
-import DescriptionEdit from '@pages/boards/detail/default/board_description/default/description_edit';
+import SubTitle from '@components/subtitle';
 import { Button } from 'antd';
+import DescriptionEdit from '@pages/boards/detail/default/hide_bar/default/board_description/default/description_edit';
+import DescriptionMarkdown from '@pages/boards/detail/default/hide_bar/default/board_description/default/description_markdown';
 
 function BoardDescription() {
   const [openEdit, setOpenEdit] = useState<boolean>(false);
@@ -21,10 +20,7 @@ function BoardDescription() {
   return (
     <>
       <div className="board-description-info">
-        <SubTitle>
-          <FileTextFilled />
-          <span>Description</span>
-        </SubTitle>
+        <SubTitle icon={<FileTextFilled />} text="Description" />
 
         {!openEdit && (
           <Button shape="round" onClick={() => setOpenEdit(true)}>
@@ -34,7 +30,7 @@ function BoardDescription() {
       </div>
 
       <div className="board-description">
-        {!openEdit && <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>}
+        {!openEdit && <DescriptionMarkdown markdown={markdown} />}
         {openEdit && <DescriptionEdit setOpenEdit={setOpenEdit} />}
       </div>
     </>

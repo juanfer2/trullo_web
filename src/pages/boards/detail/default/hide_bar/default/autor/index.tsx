@@ -1,17 +1,14 @@
 import React from 'react';
 import Image from '@components/image';
 import { UserOutlined } from '@ant-design/icons';
-import SubTitle from '@pages/boards/detail/default/sub_title';
+import SubTitle from '@components/subtitle';
 
 function Autor() {
   const image = 'https://joeschmoe.io/api/v1/random';
 
   return (
     <>
-      <SubTitle>
-        <UserOutlined />
-        <span>Made by</span>
-      </SubTitle>
+      <SubTitle icon={<UserOutlined />} text="Made by" />
       <div className="card-create-by">
         <div className="image-container">
           <Image key={image} imageUrl={image} type="small" name="create-by" />

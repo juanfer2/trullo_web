@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Header from '@pages/boards/detail/default/header';
-import SectionTeam from '@pages/boards/detail/default/section_team';
-import Autor from '@pages/boards/detail/default/autor';
-import BoardDescription from '@pages/boards/detail/default/board_description';
+import Header from '@pages/boards/detail/default/hide_bar/default/header';
+import SectionTeam from '@pages/boards/detail/default/hide_bar/default/section_team';
+import Autor from '@pages/boards/detail/default/hide_bar/default/autor';
+import BoardDescription from '@pages/boards/detail/default/hide_bar/default/board_description';
 
 function HideBar({ active, setActive }: { active: boolean; setActive: Function }) {
   return (
