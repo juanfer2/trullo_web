@@ -1,12 +1,12 @@
 import { useState, createRef } from 'react';
 import { useForm, useWatch } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { schema } from '@modules/board/form/use_board_form/validationSchema'
+import { schema } from '@modules/board/form/use_board_form/validationSchema';
 
 interface Board {
-  title: string,
-  image?: any,
-  isPrivate: boolean
+  title: string;
+  image?: any;
+  isPrivate: boolean;
 }
 
 const defaultValues = {
@@ -37,7 +37,7 @@ export const useBoardForm = (intialState?: Board) => {
     control,
     formState: { errors }
   } = useForm({
-    defaultValues: intialState as Board || defaultValues,
+    defaultValues: (intialState as Board) || defaultValues,
     mode: 'onChange',
     resolver: yupResolver(schema)
   });

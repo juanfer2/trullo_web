@@ -34,11 +34,11 @@ export const CardStyle: any = styled.div`
     gap: 5px;
 
     .icon {
-      color: #BDBDBD;
+      color: #bdbdbd;
     }
 
     span {
-      color: #BDBDBD;
+      color: #bdbdbd;
       margin-left: 3px;
     }
   }

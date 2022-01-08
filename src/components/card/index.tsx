@@ -15,36 +15,34 @@ interface CardInterface {
 function Card({ title, listBadged, imageUrl, avatarUrls }: CardInterface) {
   return (
     <CardStyle>
-      { imageUrl && <ImageCrob imageUrl={imageUrl} /> }
+      {imageUrl && <ImageCrob imageUrl={imageUrl} />}
 
       <h4 className="title">{title}</h4>
-      
-      {
-        listBadged && (
-          <div className="baged-list">
-            {listBadged.map((baged: any) => (
-              <Badge key={baged.label} type={baged.type} label={baged.label} />
-            ))}
-          </div>
+
+      {listBadged && (
+        <div className="baged-list">
+          {listBadged.map((baged: any) => (
+            <Badge key={baged.label} type={baged.type} label={baged.label} />
+          ))}
+        </div>
       )}
 
       <div className="info">
         <div className="avatars">
-          {
-            avatarUrls && avatarUrls.map((image: any) => (
+          {avatarUrls &&
+            avatarUrls.map((image: any) => (
               <Image key={image.name} imageUrl={image.url} type="small" name={image.name} />
-            ))
-          }
+            ))}
         </div>
 
         <div className="quantity">
           <div className="quantity-message">
-            <MessageFilled className='icon'/>
+            <MessageFilled className="icon" />
             <span>2</span>
           </div>
 
           <div className="quantity-files">
-            <FolderOpenFilled className='icon'/>
+            <FolderOpenFilled className="icon" />
             <span>3</span>
           </div>
         </div>

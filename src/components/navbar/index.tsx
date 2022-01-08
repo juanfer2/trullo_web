@@ -22,7 +22,7 @@ function Navbar() {
           <Button type="primary">Search</Button>
         </div>
 
-        <AvatarMenu imageUrl="https://joeschmoe.io/api/v1/random"/>
+        <AvatarMenu imageUrl="https://joeschmoe.io/api/v1/random" />
       </div>
     </nav>
   );

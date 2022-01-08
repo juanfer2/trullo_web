@@ -36,7 +36,7 @@ function BoardForm() {
   return (
     <div className="board-form">
       <form onSubmit={handleSubmit(onSubmit)}>
-        { loadingImage && <Loading /> }
+        {loadingImage && <Loading />}
         {imageUrl && (
           <div className="container-img">
             <ImageCrob imageUrl={imageUrl} />
@@ -56,11 +56,7 @@ function BoardForm() {
         <div className="container-status">
           <Button
             onClick={() => inputRef.current.click()}
-            className={
-              imageUrl 
-                ? 'status-cover status-cover--active'
-                : 'status-cover status-cover'
-            }
+            className={imageUrl ? 'status-cover status-cover--active' : 'status-cover status-cover'}
           >
             <FileImageFilled />
             <span>cover</span>

@@ -1,0 +1,17 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .description {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
