@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from 'antd';
 import { LockFilled, UnlockFilled, FileImageFilled, CloseOutlined } from '@ant-design/icons';
 import ImageCrob from '@components/image/image_crop';
+import Loading from '@components/loading';
 import { useBoardForm } from './use_board_form';
 
 function BoardForm() {
@@ -35,7 +36,7 @@ function BoardForm() {
   return (
     <div className="board-form">
       <form onSubmit={handleSubmit(onSubmit)}>
-        {loadingImage && <p>...Loading</p>}
+        { loadingImage && <Loading /> }
         {imageUrl && (
           <div className="container-img">
             <ImageCrob imageUrl={imageUrl} />
