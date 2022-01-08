@@ -13,9 +13,9 @@ function BoardDescription() {
   const markdown = `
   ### Hi👋 This is amazing board
 
-- 🔭 I’m currently working on my task
-- 🌱 I’m currently learning go, typescript
-- 💬 Ask me about ruby
+  - 🔭 I’m currently working on my task
+  - 🌱 I’m currently learning go, typescript
+  - 💬 Ask me about ruby
     `;
 
   return (
