@@ -1,3 +1,50 @@
 .card {
   color: black;
 }
+
+.card-attachement {
+  display: flex;
+  gap: 1em;
+  margin-bottom: 15px;
+
+  .image-container {
+    img {
+      width: 80px;
+      height: 53px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .file-background {
+      display: flex;
+      width: 80px;
+      height: 53px;
+      border-radius: 8px;
+      background: #E0E0E0;
+      color: #4F4F4F;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+
+    .date {
+      font-size: 10px;
+      color: #BDBDBD;
+    }
+
+    .file-name {
+      font-weight: 500;
+      font-size: 12px;
+      margin: 0
+    }
+
+    .actions {
+      display: flex;
+      gap: 1em;
+    }
+  }
+}

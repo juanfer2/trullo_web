@@ -20,5 +20,6 @@ export const ImageStyle: any = styled.div`
     height: ${(props: any) => props.height};
     background-size: cover;
     background-position: center;
+    object-fit: cover;
   }
 `;

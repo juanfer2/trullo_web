@@ -10,11 +10,12 @@ interface CardInterface {
   listBadged?: any[];
   imageUrl?: string;
   avatarUrls?: any[];
+  onClick?: Function;
 }
 
-function Card({ title, listBadged, imageUrl, avatarUrls }: CardInterface) {
+function Card({ title, listBadged, imageUrl, avatarUrls, onClick }: CardInterface) {
   return (
-    <CardStyle>
+    <CardStyle onClick={onClick}>
       {imageUrl && <ImageCrob imageUrl={imageUrl} />}
 
       <h4 className="title">{title}</h4>
@@ -54,7 +55,8 @@ function Card({ title, listBadged, imageUrl, avatarUrls }: CardInterface) {
 Card.defaultProps = {
   imageUrl: null,
   listBadged: [],
-  avatarUrls: []
+  avatarUrls: [],
+  onClick: () => {}
 };
 
 export default Card;

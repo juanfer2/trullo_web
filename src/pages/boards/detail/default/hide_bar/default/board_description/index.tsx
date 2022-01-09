@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { FileTextFilled, EditFilled } from '@ant-design/icons';
 import SubTitle from '@components/subtitle';
 import { Button } from 'antd';
-import DescriptionEdit from '@pages/boards/detail/default/hide_bar/default/board_description/default/description_edit';
-import DescriptionMarkdown from '@pages/boards/detail/default/hide_bar/default/board_description/default/description_markdown';
+import DescriptionEdit from './default/description_edit';
+import DescriptionMarkdown from './default/description_markdown';
 
 function BoardDescription() {
   const [openEdit, setOpenEdit] = useState<boolean>(false);
