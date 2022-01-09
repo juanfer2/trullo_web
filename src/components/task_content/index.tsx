@@ -14,7 +14,6 @@ function TaskContent() {
   - 🌱 I’m currently learning go, typescript
   - 💬 Ask me about ruby
     `;
-
   return (
     <div className="task-description">
       <div className="content">
