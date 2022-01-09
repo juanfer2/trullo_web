@@ -5,8 +5,11 @@ import Markdown from '@components/markdown';
 import ButtonInfo from '@components/button_info';
 import CardAttachement from '@components/card/card_attachement';
 import ImagePexels from '@assets/images/nature-image.jpg';
+import Image from '@components/image';
+
 
 function TaskContent() {
+  const image = 'https://joeschmoe.io/api/v1/random';
   const markdown = `
   ### Hi👋 This is amazing task
 
@@ -51,6 +54,34 @@ function TaskContent() {
               <ScheduleFilled />
               <span>labels</span>
             </ButtonInfo>
+          </div>
+        </div>
+        <div className="members">
+          <div className="">
+            <SubTitle icon={<FileTextFilled />} text="Members" />
+          </div>
+
+          <div className="member-list">
+            <div className="member-item">
+              <Image imageUrl={image} type="small" name='member' />
+              <div className="member-name">
+                <span>Jhoen daen</span>
+              </div>
+            </div>
+
+            <div className="member-item">
+              <Image imageUrl={image} type="small" name='member' />
+              <div className="member-name">
+                <span>Jhoen daen</span>
+              </div>
+            </div>
+
+            <div className="member-item">
+              <Image imageUrl={image} type="small" name='member' />
+              <div className="member-name">
+                <span>Jhoen daen</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -21,3 +21,20 @@
   }
 }
 
+.member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  .member-item {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
+    .member-name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

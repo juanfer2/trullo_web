@@ -28,6 +28,12 @@ const initialColumns = {
       id: '5',
       text: 'OtherColumn'
     }
+  ],
+  Done: [
+    {
+      id: '6',
+      text: 'Done card'
+    }
   ]
 };
 

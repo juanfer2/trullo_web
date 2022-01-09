@@ -436,6 +436,22 @@ input {
   gap: 1em;
 }
 
+.member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.member-list .member-item {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.member-list .member-item .member-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .social-media {
   display: flex;
   flex-direction: column;
