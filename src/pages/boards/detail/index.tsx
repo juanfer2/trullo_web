@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image from '@components/image';
 import ButtonInfo from '@components/button_info';
+import DnD from '@components/dnd';
 
 import { EllipsisOutlined, LockFilled } from '@ant-design/icons';
 import { Menu, Dropdown } from 'antd';
@@ -67,6 +68,10 @@ function BoardDetail() {
 
           <HideBar active={active} setActive={setActive} />
         </div>
+      </div>
+
+      <div className="columns">
+        <DnD />
       </div>
     </div>
   );

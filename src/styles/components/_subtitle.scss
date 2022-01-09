@@ -1,0 +1,19 @@
+.sub_title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #BDBDBD;
+  font-size: 12px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.sub_title--active {
+  cursor: pointer;
+
+  &:hover {
+    span {
+      color: #2F80ED;
+    }
+  }
+}

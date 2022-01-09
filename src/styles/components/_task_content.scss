@@ -1,0 +1,23 @@
+.task-description {
+  display: grid;
+  grid-template-columns: 1fr 0.3fr;
+  gap: 1em;
+  margin-top: 15px;
+
+  .header {
+    .task-name {
+      margin: 0;
+    }
+  
+    .description-list {
+      color: #BDBDBD;
+    }
+  }
+
+  .actions-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
